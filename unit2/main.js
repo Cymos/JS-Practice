@@ -7,6 +7,11 @@ const listUl = listDiv.querySelector('ul');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const lis = listUl.children;
+const firstListItem = listUl.firstElementChild;
+const lastListItem = listUl.lastElementChild;
+
+firstListItem.style.backgroundColor = 'teal';
+lastListItem.style.backgroundColor = 'lightblue';
 
 function attachListItemButtons(li) {
   let up = document.createElement('button');
@@ -49,7 +54,7 @@ listUl.addEventListener('click', (event) => {
     let nextLi = li.nextElementSibling;
     let ul = li.parentNode; 
       if (nextLi) {
-        ul.insertBefore(nextLi, li); 
+        ul.insertBefore(nextLi, li);
       }
     }
   }
